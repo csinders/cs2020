@@ -1,0 +1,47 @@
+@import "plumber";
+@import "andys-reset";
+@import "font-faces";
+  
+
+
+// Typography
+body {
+    font-size: 21px;
+    margin: 2rem;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: normal;
+    margin-bottom: 0.8rem;
+}
+
+h1 {
+    font-size: 62px;
+    color: #3F4EE8;
+}
+
+h2 {
+    font-size: 48px;
+}
+
+h3 {
+    font-size: 36px;
+}
+
+p {
+	@include plumber(
+		$grid-height: 1rem,
+		$baseline: 0.144,
+		$font-size: 1.75,
+		$line-height: 3,
+		$leading-top: 1,
+		$leading-bottom: 2
+  );
+}
+
+.intro {
+    color: #3F4EE8;
+}

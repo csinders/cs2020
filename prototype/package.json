@@ -1,0 +1,26 @@
+{
+  "name": "caroline-sinders-website",
+  "description": "Website for Caroline SInders",
+  "license": "No license. All rights reserved",
+  "version": "1.0.0",
+  "homepage": "https://carolinesinders.com",
+  "author": {
+    "name": "Olivia Artz",
+    "email": "liv@oliviaartz.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://gitlab.com/munin-data/website"
+  },
+  "dependencies": {
+    "ejs": "^2.5.8",
+    "gulp": "3.9.1",
+    "gulp-connect": "^5.7.0",
+    "gulp-ejs": "3.0.1",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-move-to-directory-indexes": "^0.2.0",
+    "gulp-sass": "3.1.0",
+    "gulp-sitemap": "^7.6.0",
+    "run-sequence": "^2.2.1"
+  }
+}
