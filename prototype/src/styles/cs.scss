@@ -9,11 +9,18 @@
     #timelines {
         flex-basis: 25%;
         background: royalblue;
+        position: relative;
+        .timelineRange {
+            position: absolute;
+            background: rgba(255,255,255, 0.3);
+            width: 100%;
+            border: 1px solid black;
+        }
     }
     #projects {
         flex-basis: 75%;
         article {
-            margin: 1rem 2rem 1rem 66.667%;
+            margin: 1rem 2rem 1rem 50%;
             @media (max-width: 768px) {
                 margin-left: 2rem;
             }
