@@ -5,16 +5,26 @@
   
 #work {
     display: flex;
-    background: magenta;
+    background: white;
     #timelines {
         flex-basis: 25%;
-        background: royalblue;
         position: relative;
         .timelineRange {
             position: absolute;
-            background: rgba(255,255,255, 0.3);
+            background: white;
             width: 100%;
-            // border: 1px solid black;
+            mix-blend-mode: difference;
+            &:after {
+                content: ' ';
+                display: block;
+                height: 100%;
+                width: 30px;
+                position: absolute;
+                right: -30px;
+                background: white;
+                border-top-right-radius: 12px;
+                border-bottom-right-radius: 12px;
+            }
         }
     }
     #projects {
@@ -27,3 +37,5 @@
         }
     }
 }
+
+// make some border-radius-based braces you brilliant fool

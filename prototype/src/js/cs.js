@@ -33,14 +33,13 @@
 	for( var i = 0; i < projects.length; i++ ) {
 		var $timelineRange = $( '<div class="timelineRange" />' )
 		$timelineRange.css( {
-			'top': timeToPercent( projects[i].start.ts ) + '%',
-			'bottom': timeToPercent( projects[i].end.ts ) + '%'
+			'top': 100 - timeToPercent( projects[i].end.ts ) + '%',
+			'bottom': timeToPercent( projects[i].start.ts ) + '%'
 		} )
 		$timelineRange.appendTo( '#timelines' )
 	}
 
 	function timeToPercent( value, r1, r2 ) { 
-		console.log(value)
 		var r1 = r1 || [timelineStart, timelineEnd],
 		r2 = r2 || [0, 100]
 		return ( value - r1[ 0 ] ) * ( r2[ 1 ] - r2[ 0 ] ) / ( r1[ 1 ] - r1[ 0 ] ) + r2[ 0 ]
