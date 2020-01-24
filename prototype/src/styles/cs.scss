@@ -53,16 +53,32 @@ $color7: hsl(308,98%,39%);
             &:after {
                 content: ' ';
                 display: block;
-                width: 20px;
+                width: 8px;
                 position: absolute;
                 top: -1px;
-                right: -20px;
+                right: -8px;
                 bottom: -1px;
                 border-top: 1px solid black;
                 border-right: 1px solid black;
                 border-bottom: 1px solid black;
-                border-top-right-radius: 6px;    
-                border-bottom-right-radius: 6px;
+                border-top-right-radius: 8px;    
+                border-bottom-right-radius: 8px;
+            }
+            .topic {
+                background-color: rgba(0,0,0,0.7);
+                width: calc(14.285714286% - 8px);
+                height: calc(100% - 8px);
+                display: inline-block;
+                position: absolute;
+                margin: 4px;
+                border-radius: 4px;
+                &.surveillance { left: 0%; }
+                &.abuse { left: 14.285714286%; }
+                &.social-media { left: 28.571428572%; }
+                &.loss { left: 42.857142858%; }
+                &.feminism { left: 57.142857144%; }
+                &.ai { left: 71.42857143%; }
+                &.politics { left: 85.714285716%; }
             }
         }
     }

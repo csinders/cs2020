@@ -43,6 +43,10 @@
 				'top': 100 - timeToPercent( projects[i].end.ts ) + '%',
 				'bottom': timeToPercent( projects[i].start.ts ) + '%'
 			} )
+			var theseTopics = projects[i].topics
+			for( var j = 0; j < theseTopics.length; j++ ) {
+				$( '<div class="topic" />' ).addClass( theseTopics[j] ).appendTo( $timelineRange )
+			}
 			$timelineRange.appendTo( '#timelines' )
 		}
 
