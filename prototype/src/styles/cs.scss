@@ -31,7 +31,7 @@ $color7: hsl(308,98%,39%);
 #work {
     display: flex;
     #timelines {
-        flex-basis: 15%;
+        flex-basis: 10%;
         position: relative;
         display: flex;
         .timelineTopic {
@@ -85,17 +85,17 @@ $color7: hsl(308,98%,39%);
     #bracecords {
         flex-basis: 35%;
         @media (max-width: 768px) {
-            display: none;
+            // display: none;
         }
     }
 
     #projects {
         position: relative;
-        flex-basis: 50%;
+        flex-basis: 55%;
         article {
             margin: 1rem 2rem 1rem 0.5rem;
             @media (max-width: 768px) {
-                margin-left: calc(40px + 1rem);
+                // margin-left: calc(40px + 1rem);
             }
         }
     }
