@@ -31,7 +31,7 @@ $color7: hsl(308,98%,39%);
 #work {
     display: flex;
     #timelines {
-        flex-basis: 25%;
+        flex-basis: 15%;
         position: relative;
         display: flex;
         .timelineTopic {
@@ -50,20 +50,20 @@ $color7: hsl(308,98%,39%);
             border-top: 1px dashed black;
             border-bottom: 1px dashed black;
             background-color: rgba(255,255,255,0.4);
-            &:after {
-                content: ' ';
-                display: block;
-                width: 8px;
-                position: absolute;
-                top: -1px;
-                right: -8px;
-                bottom: -1px;
-                border-top: 1px solid black;
-                border-right: 1px solid black;
-                border-bottom: 1px solid black;
-                border-top-right-radius: 8px;    
-                border-bottom-right-radius: 8px;
-            }
+            // &:after {
+            //     content: ' ';
+            //     display: block;
+            //     width: 8px;
+            //     position: absolute;
+            //     top: -1px;
+            //     right: -8px;
+            //     bottom: -1px;
+            //     border-top: 1px solid black;
+            //     border-right: 1px solid black;
+            //     border-bottom: 1px solid black;
+            //     border-top-right-radius: 8px;    
+            //     border-bottom-right-radius: 8px;
+            // }
             .topic {
                 background-color: rgba(0,0,0,0.7);
                 width: calc(14.285714286% - 8px);
@@ -82,10 +82,18 @@ $color7: hsl(308,98%,39%);
             }
         }
     }
+    #bracecords {
+        flex-basis: 35%;
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+
     #projects {
-        flex-basis: 75%;
+        position: relative;
+        flex-basis: 50%;
         article {
-            margin: 1rem 2rem 1rem 50%;
+            margin: 1rem 2rem 1rem 0.5rem;
             @media (max-width: 768px) {
                 margin-left: calc(40px + 1rem);
             }

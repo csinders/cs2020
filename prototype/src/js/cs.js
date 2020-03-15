@@ -5,6 +5,8 @@
 		$topicLinks = $( '[data-topic-link' ),
 		$projects = $( '#projects article' ),
 		$timelines = $( '#timelines' ),
+		$svg = $( '#bracecords' ),
+		$ranges,
 		DateTime = luxon.DateTime,
 		timelineStart = Infinity,
 		timelineEnd = -Infinity
@@ -35,8 +37,6 @@
 	}
 
 	var prepTheTimeRanges = function() {
-		// Now create the timelineRanges based on the relative position of the 
-		//  projects[n].start/end properties relative to the timelineStart/End
 		for( var i = 0; i < projects.length; i++ ) {
 			var $timelineRange = $( '<div class="timelineRange" />' )
 			$timelineRange.css( {
@@ -57,10 +57,64 @@
 		}
 	}
 
+	var addPaths = function( braceTop, braceBottom, targetY, width ) {
+
+		const height = braceBottom - braceTop,
+			  xTop = 0,
+			  yTop = braceTop,
+			  xBottom = 0,
+			  yBottom = braceBottom,
+			  xMiddle = width * 0.25,
+			  yMiddle = (height * 0.5) + braceTop,
+			  xEnd = width,
+			  yEnd = targetY,
+	  
+			  xTopCp = width * 0.125,
+			  yTopCp = yTop,
+			  xBottomCp = xTopCp,
+			  yBottomCp = yBottom,
+			  xMiddleCpLeft = xTopCp,
+			  yMiddleCpLeft = yMiddle,
+			  xMiddleCpRight = width * 0.625,
+			  yMiddleCpRight = yMiddle,
+			  xEndCp = xMiddleCpRight,
+			  yEndCp = yEnd,
+		
+			  pathStr = `<path d="M ${xTop} ${yTop} C ${xTopCp} ${yTopCp}, ${xMiddleCpLeft} ${yMiddleCpLeft}, ${xMiddle} ${yMiddle}" stroke="#000" fill="transparent" />
+	  					 <path d="M ${xBottom} ${yBottom} C ${xBottomCp} ${yBottomCp}, ${xMiddleCpLeft} ${yMiddleCpLeft}, ${xMiddle} ${yMiddle}" stroke="#000" fill="transparent" />
+	  					 <path d="M ${xMiddle} ${yMiddle} C ${xMiddleCpRight} ${yMiddleCpRight}, ${xEndCp} ${yEndCp}, ${xEnd} ${yEnd}" stroke="#000" fill="transparent" />`
+	  
+		$svg[0].innerHTML += pathStr
+	  
+	}
+
+	var drawTheCoords = function() {
+
+		var $this,
+			top,
+			bottom,
+			projectY,
+			width = $svg.width()
+
+		$svg.empty()
+
+		$ranges.each( function( index ) {
+			$this = $( this )
+			top = $this.position().top
+			bottom = top + $this.height()
+			projectY = $projects.eq( index ).position().top + 40
+			console.log( top, bottom, projectY, width )
+			addPaths( top, bottom, projectY, width )
+		} )
+
+	}
 
 	prepTheTopics()
 	prepTheProjects()
 	prepTheTimeRanges()
+	$ranges = $( '.timelineRange' )
+	drawTheCoords()
+	$(window).resize( drawTheCoords )
 
 	console.log( topics, projects, timelineStart, timelineEnd )
 
