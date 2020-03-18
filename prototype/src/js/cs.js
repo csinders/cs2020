@@ -94,16 +94,21 @@
 			top,
 			bottom,
 			projectY,
-			width = $svg.width()
+			width = $svg.width(),
+			scroll = $( window ).scrollTop()
 
 		$svg.empty()
 
 		$ranges.each( function( index ) {
 			$this = $( this )
-			top = $this.position().top
+			if( scroll > $svg.position().top )
+				top = $this.position().top + ( $( window ).scrollTop() - $svg.position().top ) + 21
+			else
+				top = $this.position().top
 			bottom = top + $this.height()
 			projectY = $projects.eq( index ).position().top + 40
-			console.log( top, bottom, projectY, width )
+			// console.log( $svg.position().top, $( window ).scrollTop() )
+			// console.log( top, bottom, projectY, width )
 			addPaths( top, bottom, projectY, width )
 		} )
 
@@ -114,6 +119,7 @@
 	prepTheTimeRanges()
 	$ranges = $( '.timelineRange' )
 	drawTheCoords()
+	$(window).scroll( drawTheCoords )
 	$(window).resize( drawTheCoords )
 
 	console.log( topics, projects, timelineStart, timelineEnd )
