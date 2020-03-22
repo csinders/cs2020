@@ -12,6 +12,14 @@ $color5: hsl(18,86%,57%);
 $color6: hsl(343,98%,47%);
 $color7: hsl(308,98%,39%);
 
+body {
+    margin: 4%;
+}
+
+p {
+    margin: 0;
+}
+
 #intro {
     a[data-topic-link] {
         text-decoration: none;
@@ -26,6 +34,7 @@ $color7: hsl(308,98%,39%);
         &:nth-of-type(6) { background-color: $color6; }
         &:nth-of-type(7) { background-color: $color7; }
     }
+    margin-bottom: 2rem;
 }
 
 #work {
