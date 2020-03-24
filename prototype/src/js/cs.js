@@ -101,10 +101,12 @@
 
 		$ranges.each( function( index ) {
 			$this = $( this )
-			if( scroll > $svg.position().top )
+			if( scroll > $svg.position().top - 21 ) {
 				top = $this.position().top + ( $( window ).scrollTop() - $svg.position().top ) + 21
-			else
+			} else {
 				top = $this.position().top
+			}
+			
 			bottom = top + $this.height()
 			projectY = $projects.eq( index ).position().top + 40
 			// console.log( $svg.position().top, $( window ).scrollTop() )
