@@ -12,10 +12,19 @@
 		timelineEnd = -Infinity
 
 	var prepTheTopics = function() {
-		$topicLinks.each( function() {
-			topics.push( $( this ).attr( 'data-topic-link' ) )
-			$timelines.append( $( '<div class="timelineTopic" />'))
+		
+		var thisTopic,
+			thisTimelineEl
+
+		$topicLinks.each( function(a, b) {
+			thisTopic = $( this ).attr( 'data-topic-link' )
+			topics.push( thisTopic )
+			thisTimelineEl = $( '<div class="timelineTopic" />' )
+			thisTimelineEl.append( `<div class="timelineLabel">${thisTopic}</div>` )
+			$timelines.append( thisTimelineEl )
+			console.log( thisTopic )
 		})
+
 	}
 
 	var prepTheProjects = function() {

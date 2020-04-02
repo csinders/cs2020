@@ -53,7 +53,18 @@ p {
             &:nth-of-type(4) { background-color: $color4; }
             &:nth-of-type(5) { background-color: $color5; }
             &:nth-of-type(6) { background-color: $color6; }
-            &:nth-of-type(7) { background-color: $color7; }    
+            &:nth-of-type(7) { background-color: $color7; }
+            .timelineLabel {
+                position: absolute;
+                text-transform: uppercase;
+                z-index: 99999;
+                color: white;
+                transform-origin: left bottom;
+                transform: rotate(90deg) translate(-0.9vw, 0.05vw);
+                white-space: nowrap;
+                font-size: 1vw;
+                line-height: 1.5vw;
+            }
         }
         .timelineRange {
             position: absolute;
@@ -63,12 +74,18 @@ p {
             background-color: rgba(255,255,255,0.4);
             .topic {
                 background-color: rgba(0,0,0,0.7);
-                width: calc(14.285714286% - 8px);
-                height: calc(100% - 8px);
+                width: calc(14.285714286% - 4px);
+                height: calc(100% - 4px);
                 display: inline-block;
                 position: absolute;
-                margin: 4px;
-                border-radius: 4px;
+                margin: 2px;
+                border-radius: 2px;
+                @media (max-width: 920px) {
+                    width: 14.285714286%;
+                    height: 100%;
+                    margin: 0;
+                    border-radius: 0;
+                }
                 &.surveillance { left: 0%; }
                 &.abuse { left: 14.285714286%; }
                 &.social-media { left: 28.571428572%; }
