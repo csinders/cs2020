@@ -1,2 +1,18 @@
 .DS_Store
 node_modules
+
+wordpress/*
+!wordpress/favicon.ico
+!wordpress/wp-config.php
+!wordpress/wp-content
+
+wordpress/wp-content/*
+!wordpress/wp-content/mu-plugins
+!wordpress/wp-content/plugins
+!wordpress/wp-content/themes
+
+wordpress/wp-content/plugins/*
+# !wordpress/wp-content/plugins/my-plugin
+
+wordpress/wp-content/themes/*
+!wordpress/wp-content/themes/cs2020
