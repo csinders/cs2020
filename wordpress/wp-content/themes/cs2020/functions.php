@@ -19,3 +19,30 @@ function loadjs() {
 }
 add_action('wp_enqueue_scripts', 'loadjs');
 
+function get_projects() {
+    $posts = get_posts( array(
+        'posts_per_page' => -1,
+        'order'          => 'ASC'
+    ) );
+
+    $projects = array();
+
+    foreach($posts as $post) {
+        $post_id = $post->ID;
+        $start_date = DateTime::createFromFormat('Ymd', get_post_meta($post_id, 'project_start_date')[0]);
+        $end_date = DateTime::createFromFormat('Ymd', get_post_meta($post_id, 'project_end_date')[0]);
+        $topics = get_the_category($post_id);
+        $topics_array = array();
+        $topics_array = wp_get_object_terms($post_id, 'category', array('fields' => 'slugs'));
+        $topics = implode(',', $topics_array);
+        $post_data = array(
+            'title'         => get_the_title($post),
+            'start_date'    => $start_date->format('Y-m-d'),
+            'end_date'      => $end_date->format('Y-m-d'),
+            'topics'        => $topics
+        );
+        array_push($projects, $post_data);
+    }
+
+    return $projects;
+}
