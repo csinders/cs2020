@@ -1,0 +1,36 @@
+body {
+    font-size: 16px;
+    margin: 32px;
+    font-family: neuzeit-grotesk,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h2 {
+	font-family: neuzeit-grotesk,sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	@include plumber(
+		$grid-height: 1rem,
+		$baseline: 0.128,
+		$font-size: 1.5,
+		$line-height: 2,
+		$leading-top: 0,
+		$leading-bottom: 0
+  );
+}
+
+p {
+	@include plumber(
+		$grid-height: 1rem,
+		$baseline: 0.128,
+		$font-size: 1,
+		$line-height: 2,
+		$leading-top: 1,
+		$leading-bottom: 1
+  );
+}
+
+#intro a {
+    color: #3F4EE8;
+}

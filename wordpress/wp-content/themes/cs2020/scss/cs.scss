@@ -1,0 +1,139 @@
+@import "plumber";
+@import "andys-reset";
+@import "typography";
+
+
+$color1: hsl(194,98%,41%);
+$color2: hsl(160,97%,39%);
+$color3: hsl(84,61%,62%);
+$color4: hsl(40,96%,63%);
+$color5: hsl(18,86%,57%);
+$color6: hsl(343,98%,47%);
+$color7: hsl(308,98%,39%);
+
+body {
+    margin: 4% 4% 0;
+}
+
+p {
+    margin: 0;
+}
+
+#intro {
+    a[data-topic-link] {
+        text-decoration: none;
+        color: black;
+        padding: 2px 4px;
+        border-radius: 4px;;
+        &:nth-of-type(1) { background-color: $color1; }
+        &:nth-of-type(2) { background-color: $color2; }
+        &:nth-of-type(3) { background-color: $color3; }
+        &:nth-of-type(4) { background-color: $color4; }
+        &:nth-of-type(5) { background-color: $color5; }
+        &:nth-of-type(6) { background-color: $color6; }
+        &:nth-of-type(7) { background-color: $color7; }
+    }
+    margin-bottom: 2rem;
+}
+
+#work {
+    display: flex;
+    #timelines {
+        flex-basis: 10%;
+        position: sticky;
+        top: 20px;
+        max-height: calc(100vh - 40px);
+        display: flex;
+        .timelineTopic {
+            width: 100%;
+            &:nth-of-type(1) { background-color: $color1; }
+            &:nth-of-type(2) { background-color: $color2; }
+            &:nth-of-type(3) { background-color: $color3; }
+            &:nth-of-type(4) { background-color: $color4; }
+            &:nth-of-type(5) { background-color: $color5; }
+            &:nth-of-type(6) { background-color: $color6; }
+            &:nth-of-type(7) { background-color: $color7; }
+            .timelineLabel {
+                position: absolute;
+                text-transform: uppercase;
+                z-index: 99999;
+                color: white;
+                transform-origin: left bottom;
+                transform: rotate(90deg) translate(-0.9vw, 0.08vw);
+                white-space: nowrap;
+                font-size: 1vw;
+                line-height: 1.5vw;
+            }
+        }
+        .timelineRange {
+            position: absolute;
+            width: 100%;
+            border-top: 1px dashed black;
+            border-bottom: 1px dashed black;
+            background-color: rgba(255,255,255,0.4);
+            .topic {
+                background-color: rgba(0,0,0,0.7);
+                width: calc(14.285714286% - 4px);
+                height: calc(100% - 4px);
+                display: inline-block;
+                position: absolute;
+                margin: 2px;
+                border-radius: 2px;
+                @media (max-width: 920px) {
+                    width: 14.285714286%;
+                    height: 100%;
+                    margin: 0;
+                    border-radius: 0;
+                }
+                &.surveillance { left: 0%; }
+                &.abuse { left: 14.285714286%; }
+                &.social-media { left: 28.571428572%; }
+                &.loss { left: 42.857142858%; }
+                &.feminism { left: 57.142857144%; }
+                &.ai { left: 71.42857143%; }
+                &.politics { left: 85.714285716%; }
+            }
+        }
+    }
+    #bracecords {
+        flex-basis: 35%;
+        @media (max-width: 768px) {
+            // display: none;
+        }
+    }
+
+    #projects {
+        position: relative;
+        flex-basis: 55%;
+        article {
+            margin: 1rem 2rem 1rem 0.5rem;
+            @media (max-width: 768px) {
+                // margin-left: calc(40px + 1rem);
+            }
+        }
+    }
+}
+
+ul.menu {
+    margin-bottom: 2rem;
+    li {
+        display: inline;
+        &.current-menu-item a {
+            border-bottom: 2px solid #00F;
+        }
+        &:after {
+            content: ' /';
+            color: #CACACA;
+            padding-right: 0.8rem;
+        }
+        &:last-child:after {
+            display: none;
+        }
+        a {
+            color: #00F;
+            text-decoration: none;
+            margin-right: 1rem;
+            padding-bottom: 0.2rem;        
+        }
+    }
+}
