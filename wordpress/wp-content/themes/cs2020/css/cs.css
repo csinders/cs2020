@@ -251,6 +251,7 @@ ul.menu li a {
   color: #00F;
   text-decoration: none;
   margin-right: 1rem;
+  padding-bottom: 0.2rem;
 }
 
 ul.menu li.current-menu-item a {
