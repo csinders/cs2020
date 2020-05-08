@@ -238,3 +238,31 @@ p {
     flex-basis: 55%; }
     #work #projects article {
       margin: 1rem 2rem 1rem 0.5rem; }
+
+ul.menu {
+  margin-bottom: 2rem;
+}
+
+ul.menu li {
+  display: inline;
+}
+
+ul.menu li a {
+  color: #00F;
+  text-decoration: none;
+  margin-right: 1rem;
+}
+
+ul.menu li.current-menu-item a {
+  border-bottom: 2px solid #00F;
+}
+
+ul.menu li:after {
+  content: ' /';
+  color: #CACACA;
+  padding-right: 0.8rem;
+}
+
+ul.menu li:last-child:after {
+  display: none;
+}

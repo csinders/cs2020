@@ -1,5 +1,9 @@
 <?php get_header();?>
 
+<?php   wp_nav_menu( array( 
+            'theme_location' => 'my-custom-menu', 
+            'container_class' => 'custom-menu-class' ) ); ?>
+
 <section id="intro">
     <p>Hi there, I’m Caroline.</p>
     <p>I am a machine learning designer/user researcher, artist, and digital anthropologist obsessed with language, culture and images.</p>
