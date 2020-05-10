@@ -73,14 +73,21 @@ p {
   padding-bottom: 0.372rem;
   margin-bottom: 1rem;
 }
-#intro a {
-  color: #3f4ee8;
+figcaption {
+  font-size: 12px;
 }
 body {
   margin: 4% 4% 0;
+  max-width: 1000px;
 }
 p {
   margin: 0;
+}
+a {
+  color: #00f;
+}
+figure {
+  margin: 1rem 0;
 }
 #intro {
   margin-bottom: 2rem;
@@ -213,13 +220,13 @@ p {
   margin: 1rem 2rem 1rem 0.5rem;
 }
 ul.menu {
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 ul.menu li {
   display: inline;
 }
 ul.menu li.current-menu-item a {
-  border-bottom: 2px solid #00f;
+  border-bottom: 2px solid #3f4ee8;
 }
 ul.menu li:after {
   content: ' /';
@@ -230,7 +237,7 @@ ul.menu li:last-child:after {
   display: none;
 }
 ul.menu li a {
-  color: #00f;
+  color: #3f4ee8;
   text-decoration: none;
   margin-right: 1rem;
   padding-bottom: 0.2rem;

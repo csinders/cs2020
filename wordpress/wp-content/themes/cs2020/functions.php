@@ -42,6 +42,8 @@ function get_projects() {
         $topics = implode(',', $topics_array);
         $post_data = array(
             'title'         => get_the_title($post),
+            'excerpt'       => get_the_excerpt($post),
+            'link'          => get_post_permalink($post),
             'start_date'    => $start_date->format('Y-m-d'),
             'end_date'      => $end_date->format('Y-m-d'),
             'topics'        => $topics

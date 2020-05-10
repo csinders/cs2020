@@ -13,10 +13,19 @@ $color7: hsl(308,98%,39%);
 
 body {
     margin: 4% 4% 0;
+    max-width: 1000px;
 }
 
 p {
     margin: 0;
+}
+
+a {
+    color: #00F;
+}
+
+figure {
+    margin: 1rem 0;
 }
 
 #intro {
@@ -107,6 +116,11 @@ p {
         flex-basis: 55%;
         article {
             margin: 1rem 2rem 1rem 0.5rem;
+            h2 {
+                a {
+                    // text-decoration: none;
+                }
+            }
             @media (max-width: 768px) {
                 // margin-left: calc(40px + 1rem);
             }
@@ -115,11 +129,11 @@ p {
 }
 
 ul.menu {
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
     li {
         display: inline;
         &.current-menu-item a {
-            border-bottom: 2px solid #00F;
+            border-bottom: 2px solid #3F4EE8;
         }
         &:after {
             content: ' /';
@@ -130,7 +144,7 @@ ul.menu {
             display: none;
         }
         a {
-            color: #00F;
+            color: #3F4EE8;
             text-decoration: none;
             margin-right: 1rem;
             padding-bottom: 0.2rem;        
