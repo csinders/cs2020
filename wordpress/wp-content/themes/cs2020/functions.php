@@ -27,7 +27,9 @@ add_action('wp_enqueue_scripts', 'loadjs');
 function get_projects() {
     $posts = get_posts( array(
         'posts_per_page' => -1,
-        'order'          => 'ASC'
+        'order'          => 'DESC',
+        'meta_key'			=> 'project_start_date',
+        'orderby'			=> 'meta_value'
     ) );
 
     $projects = array();
