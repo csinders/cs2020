@@ -47,16 +47,20 @@ input, button, textarea, select {
     scroll-behavior: auto !important;
   }
 }
-body {
-  font-size: 16px;
-  margin: 32px;
-  font-family: neuzeit-grotesk, sans-serif;
-  font-weight: 400;
+@font-face {
+  font-family: Laica;
   font-style: normal;
+  font-weight: 400;
+  src: url('../webfonts/LaicaATrial-Regular.woff2') format('woff2'), url('../webfonts/LaicaATrial-Regular.woff') format('woff');
+}
+@font-face {
+  font-family: Laica;
+  font-style: italic;
+  font-weight: 400;
+  src: url('../webfonts/LaicaATrial-Italic.woff2') format('woff2'), url('../webfonts/LaicaATrial-Italic.woff') format('woff');
 }
 h2 {
-  font-family: neuzeit-grotesk, sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   font-style: normal;
   font-size: 1.5rem;
   line-height: 2rem;
@@ -79,15 +83,60 @@ figcaption {
 body {
   margin: 4% 4% 0;
   max-width: 1000px;
+  font-size: 16px;
+  margin: 32px;
+  font-weight: 300;
+  font-style: normal;
+  font-family: Laica, sans-serif;
 }
 p {
   margin: 0;
 }
 a {
-  color: #00f;
+  color: #963fe8;
 }
 figure {
   margin: 1rem 0;
+}
+section {
+  padding: 0 1.2rem;
+}
+nav {
+  margin-bottom: 4rem;
+  padding: 0.7rem 1.2rem;
+  background-color: #029fcf;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+}
+nav h1 {
+  font-size: 16px;
+}
+nav h1 a {
+  color: #fff;
+  text-decoration: none;
+}
+nav ul.menu {
+  display: inline;
+}
+nav ul.menu li {
+  display: inline;
+}
+nav ul.menu li.current-menu-item a {
+  border-bottom: 1px solid #fff;
+}
+nav ul.menu li:after {
+  content: ' •';
+  padding-right: 0.8rem;
+}
+nav ul.menu li:last-child:after {
+  display: none;
+}
+nav ul.menu li a {
+  color: white;
+  text-decoration: none;
+  margin-right: 1rem;
+  padding-bottom: 0.2rem;
 }
 #intro {
   margin-bottom: 2rem;
@@ -159,9 +208,9 @@ figure {
   z-index: 99999;
   color: white;
   transform-origin: left bottom;
-  transform: rotate(90deg) translate(-0.9vw, 0.08vw);
+  transform: rotate(90deg) translate(-0.9vw, 0.13vw);
   white-space: nowrap;
-  font-size: 1vw;
+  font-size: 0.9vw;
   line-height: 1.5vw;
 }
 #work #timelines .timelineRange {
@@ -219,26 +268,6 @@ figure {
 #work #projects article {
   margin: 1rem 2rem 1rem 0.5rem;
 }
-ul.menu {
-  margin-bottom: 4rem;
-}
-ul.menu li {
-  display: inline;
-}
-ul.menu li.current-menu-item a {
-  border-bottom: 2px solid #3f4ee8;
-}
-ul.menu li:after {
-  content: ' /';
-  color: #cacaca;
-  padding-right: 0.8rem;
-}
-ul.menu li:last-child:after {
-  display: none;
-}
-ul.menu li a {
-  color: #3f4ee8;
+#work #projects article h2 a {
   text-decoration: none;
-  margin-right: 1rem;
-  padding-bottom: 0.2rem;
 }

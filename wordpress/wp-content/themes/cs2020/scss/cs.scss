@@ -11,9 +11,18 @@ $color5: hsl(18,86%,57%);
 $color6: hsl(343,98%,47%);
 $color7: hsl(308,98%,39%);
 
+$didot: Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman, serif;
+$raleway: Raleway, sans-serif;
+$laica: Laica, sans-serif;
+
 body {
     margin: 4% 4% 0;
     max-width: 1000px;
+    font-size: 16px;
+    margin: 32px;
+    font-weight: 300;
+    font-style: normal;
+    font-family: $laica;
 }
 
 p {
@@ -21,11 +30,53 @@ p {
 }
 
 a {
-    color: #00F;
+    color: rgb(150, 63, 232);
 }
 
 figure {
     margin: 1rem 0;
+}
+
+section {
+    padding: 0 1.2rem;
+}
+
+nav {
+    margin-bottom: 4rem;
+    padding: 0.7rem 1.2rem;
+    background-color: $color1;
+    display: flex;
+    justify-content: space-between;
+    color: #FFF;
+    h1 {
+        font-size: 16px;
+        a {
+            color: #FFF;
+            text-decoration: none;
+        }
+    }
+    ul.menu {
+        display: inline;
+        li {
+            display: inline;
+            &.current-menu-item a {
+                border-bottom: 1px solid #FFF;
+            }
+            &:after {
+                content: ' •';
+                padding-right: 0.8rem;
+            }
+            &:last-child:after {
+                display: none;
+            }
+            a {
+                color: white;
+                text-decoration: none;
+                margin-right: 1rem;
+                padding-bottom: 0.2rem;        
+            }
+        }
+    }
 }
 
 #intro {
@@ -68,9 +119,9 @@ figure {
                 z-index: 99999;
                 color: white;
                 transform-origin: left bottom;
-                transform: rotate(90deg) translate(-0.9vw, 0.08vw);
+                transform: rotate(90deg) translate(-0.9vw, 0.13vw);
                 white-space: nowrap;
-                font-size: 1vw;
+                font-size: 0.9vw;
                 line-height: 1.5vw;
             }
         }
@@ -118,36 +169,12 @@ figure {
             margin: 1rem 2rem 1rem 0.5rem;
             h2 {
                 a {
-                    // text-decoration: none;
+                    text-decoration: none;
                 }
             }
             @media (max-width: 768px) {
                 // margin-left: calc(40px + 1rem);
             }
-        }
-    }
-}
-
-ul.menu {
-    margin-bottom: 4rem;
-    li {
-        display: inline;
-        &.current-menu-item a {
-            border-bottom: 2px solid #3F4EE8;
-        }
-        &:after {
-            content: ' /';
-            color: #CACACA;
-            padding-right: 0.8rem;
-        }
-        &:last-child:after {
-            display: none;
-        }
-        a {
-            color: #3F4EE8;
-            text-decoration: none;
-            margin-right: 1rem;
-            padding-bottom: 0.2rem;        
         }
     }
 }

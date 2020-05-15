@@ -1,14 +1,21 @@
-body {
-    font-size: 16px;
-    margin: 32px;
-    font-family: neuzeit-grotesk,sans-serif;
-    font-weight: 400;
+@font-face {
+    font-family: Laica;
     font-style: normal;
+    font-weight: 400;
+    src: url('../webfonts/LaicaATrial-Regular.woff2') format('woff2'),
+         url('../webfonts/LaicaATrial-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: Laica;
+    font-style: italic;
+    font-weight: 400;
+    src: url('../webfonts/LaicaATrial-Italic.woff2') format('woff2'),
+         url('../webfonts/LaicaATrial-Italic.woff') format('woff');
 }
 
 h2 {
-	font-family: neuzeit-grotesk,sans-serif;
-	font-weight: 400;
+	font-weight: 700;
 	font-style: normal;
 	@include plumber(
 		$grid-height: 1rem,

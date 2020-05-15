@@ -1,8 +1,10 @@
 <?php get_header();?>
-
-<?php   wp_nav_menu( array( 
-            'theme_location' => 'my-custom-menu', 
-            'container_class' => 'custom-menu-class' ) ); ?>
+<nav role="navigation" aria-label="Main">
+    <?php   wp_nav_menu( array( 
+                'theme_location' => 'my-custom-menu', 
+                'container_class' => 'custom-menu-class' ) ); ?>
+    <h1><a href="/" title="Home">Caroline Sinders</a></h1>
+</nav>
 
 <section id="intro">
     <?php   $page = get_page_by_title( 'home' );
