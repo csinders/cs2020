@@ -6,22 +6,20 @@
     <h1><a href="/" title="Home">Caroline Sinders</a></h1>
 </nav>
   
-    <div id="primary" class="content-area">
-        <main id="main" class="site-main" role="main">
+    <section class="project" role="main">
   
-        <?php
-        // Start the loop.
-        while ( have_posts() ) : the_post();
+        <?php while ( have_posts() ) : the_post(); ?>
   
-            // the_title('<h2>', '</h2>');
-            
-            the_content();
+            <header>
+                <?php the_title('<h2>', '</h2>'); ?>
+                <span class="projectDateRange"><?php get_project_date_range(); ?></span>
+                <span class="projectTopics"><?php get_project_categories(); ?></span>
+            </header>
+
+            <?php the_content(); ?>
   
-        // End the loop.
-        endwhile;
-        ?>
+        <?php endwhile; ?>
   
-        </main><!-- .site-main -->
-    </div><!-- .content-area -->
+    </section>
   
 <?php get_footer(); ?>

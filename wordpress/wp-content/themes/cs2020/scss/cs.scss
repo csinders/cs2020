@@ -3,13 +3,14 @@
 @import "typography";
 
 
-$color1: hsl(194,98%,41%);
-$color2: hsl(160,97%,39%);
-$color3: hsl(84,61%,62%);
-$color4: hsl(40,96%,63%);
-$color5: hsl(18,86%,57%);
-$color6: hsl(343,98%,47%);
-$color7: hsl(308,98%,39%);
+$color1: #4EACF8;
+$color2: #2AD9C9;
+$color3: #25CD92;
+$color4: #FAB353;
+$color5: #F88B5A;
+$color6: #F46E6E;
+$color7: #F481C0;
+$color8: #C17BC8;
 
 $didot: Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman, serif;
 $raleway: Raleway, sans-serif;
@@ -41,7 +42,7 @@ section {
 }
 
 nav {
-    margin-bottom: 4rem;
+    margin-bottom: 5rem;
     padding: 0.7rem 1.2rem;
     background-color: $color1;
     display: flex;
@@ -91,6 +92,7 @@ nav {
         &:nth-of-type(5) { background-color: $color5; }
         &:nth-of-type(6) { background-color: $color6; }
         &:nth-of-type(7) { background-color: $color7; }
+        &:nth-of-type(8) { background-color: $color8; }
     }
     margin-bottom: 2rem;
 }
@@ -112,6 +114,7 @@ nav {
             &:nth-of-type(5) { background-color: $color5; }
             &:nth-of-type(6) { background-color: $color6; }
             &:nth-of-type(7) { background-color: $color7; }
+            &:nth-of-type(8) { background-color: $color8; }
             .timelineLabel {
                 position: absolute;
                 text-transform: uppercase;
@@ -132,25 +135,26 @@ nav {
             background-color: rgba(255,255,255,0.4);
             .topic {
                 background-color: rgba(0,0,0,0.7);
-                width: calc(14.285714286% - 4px);
+                width: calc(12.5% - 4px);
                 height: calc(100% - 4px);
                 display: inline-block;
                 position: absolute;
                 margin: 2px;
                 border-radius: 2px;
                 @media (max-width: 920px) {
-                    width: 14.285714286%;
+                    width: 12.5%;
                     height: 100%;
                     margin: 0;
                     border-radius: 0;
                 }
-                &.surveillance { left: 0%; }
-                &.abuse { left: 14.285714286%; }
-                &.social-media { left: 28.571428572%; }
-                &.loss { left: 42.857142858%; }
-                &.feminism { left: 57.142857144%; }
-                &.ai { left: 71.42857143%; }
-                &.politics { left: 85.714285716%; }
+                &.privacy { left: 0%; }
+                &.data { left: 12.5%; }
+                &.feminism { left: 25%; }
+                &.abuse { left: 37.5%; }
+                &.social-networks { left: 50%; }
+                &.loss { left: 62.5%; }
+                &.ai { left: 75%; }
+                &.politics { left: 87.5%; }
             }
         }
     }
@@ -174,6 +178,28 @@ nav {
             @media (max-width: 768px) {
                 // margin-left: calc(40px + 1rem);
             }
+        }
+    }
+}
+
+// Style for individual project pages
+.project {
+    header {
+        display: flex;
+        margin-bottom: 3rem;
+        padding-bottom: 0.4rem;
+        border-bottom: 1px solid #000;
+        align-items: baseline;
+        h2 {
+            margin-right: 0.5rem;
+        }
+        .projectDateRange {
+            font-style: italic;
+        }
+        .projectTopics {
+            font-style: italic;
+            margin-left: auto;
+            text-transform: lowercase;
         }
     }
 }

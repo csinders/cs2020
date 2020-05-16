@@ -101,9 +101,9 @@ section {
   padding: 0 1.2rem;
 }
 nav {
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
   padding: 0.7rem 1.2rem;
-  background-color: #029fcf;
+  background-color: #4eacf8;
   display: flex;
   justify-content: space-between;
   color: #fff;
@@ -147,25 +147,28 @@ nav ul.menu li a {
   border-radius: 4px;
 }
 #intro a[data-topic-link]:nth-of-type(1) {
-  background-color: #029fcf;
+  background-color: #4eacf8;
 }
 #intro a[data-topic-link]:nth-of-type(2) {
-  background-color: #03c484;
+  background-color: #2ad9c9;
 }
 #intro a[data-topic-link]:nth-of-type(3) {
-  background-color: #aad963;
+  background-color: #25cd92;
 }
 #intro a[data-topic-link]:nth-of-type(4) {
-  background-color: #fbbf46;
+  background-color: #fab353;
 }
 #intro a[data-topic-link]:nth-of-type(5) {
-  background-color: #f06c33;
+  background-color: #f88b5a;
 }
 #intro a[data-topic-link]:nth-of-type(6) {
-  background-color: #ed0245;
+  background-color: #f46e6e;
 }
 #intro a[data-topic-link]:nth-of-type(7) {
-  background-color: #c502ab;
+  background-color: #f481c0;
+}
+#intro a[data-topic-link]:nth-of-type(8) {
+  background-color: #c17bc8;
 }
 #work {
   display: flex;
@@ -181,25 +184,28 @@ nav ul.menu li a {
   width: 100%;
 }
 #work #timelines .timelineTopic:nth-of-type(1) {
-  background-color: #029fcf;
+  background-color: #4eacf8;
 }
 #work #timelines .timelineTopic:nth-of-type(2) {
-  background-color: #03c484;
+  background-color: #2ad9c9;
 }
 #work #timelines .timelineTopic:nth-of-type(3) {
-  background-color: #aad963;
+  background-color: #25cd92;
 }
 #work #timelines .timelineTopic:nth-of-type(4) {
-  background-color: #fbbf46;
+  background-color: #fab353;
 }
 #work #timelines .timelineTopic:nth-of-type(5) {
-  background-color: #f06c33;
+  background-color: #f88b5a;
 }
 #work #timelines .timelineTopic:nth-of-type(6) {
-  background-color: #ed0245;
+  background-color: #f46e6e;
 }
 #work #timelines .timelineTopic:nth-of-type(7) {
-  background-color: #c502ab;
+  background-color: #f481c0;
+}
+#work #timelines .timelineTopic:nth-of-type(8) {
+  background-color: #c17bc8;
 }
 #work #timelines .timelineTopic .timelineLabel {
   position: absolute;
@@ -221,7 +227,7 @@ nav ul.menu li a {
 }
 #work #timelines .timelineRange .topic {
   background-color: rgba(0, 0, 0, 0.7);
-  width: calc(14.285714286% - 4px);
+  width: calc(12.5% - 4px);
   height: calc(100% - 4px);
   display: inline-block;
   position: absolute;
@@ -230,32 +236,35 @@ nav ul.menu li a {
 }
 @media (max-width: 920px) {
   #work #timelines .timelineRange .topic {
-    width: 14.285714286%;
+    width: 12.5%;
     height: 100%;
     margin: 0;
     border-radius: 0;
   }
 }
-#work #timelines .timelineRange .topic.surveillance {
+#work #timelines .timelineRange .topic.privacy {
   left: 0%;
 }
-#work #timelines .timelineRange .topic.abuse {
-  left: 14.285714286%;
-}
-#work #timelines .timelineRange .topic.social-media {
-  left: 28.571428572%;
-}
-#work #timelines .timelineRange .topic.loss {
-  left: 42.857142858%;
+#work #timelines .timelineRange .topic.data {
+  left: 12.5%;
 }
 #work #timelines .timelineRange .topic.feminism {
-  left: 57.142857144%;
+  left: 25%;
+}
+#work #timelines .timelineRange .topic.abuse {
+  left: 37.5%;
+}
+#work #timelines .timelineRange .topic.social-networks {
+  left: 50%;
+}
+#work #timelines .timelineRange .topic.loss {
+  left: 62.5%;
 }
 #work #timelines .timelineRange .topic.ai {
-  left: 71.42857143%;
+  left: 75%;
 }
 #work #timelines .timelineRange .topic.politics {
-  left: 85.714285716%;
+  left: 87.5%;
 }
 #work #bracecords {
   flex-basis: 35%;
@@ -269,4 +278,22 @@ nav ul.menu li a {
 }
 #work #projects article h2 a {
   text-decoration: none;
+}
+.project header {
+  display: flex;
+  margin-bottom: 3rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid #000;
+  align-items: baseline;
+}
+.project header h2 {
+  margin-right: 0.5rem;
+}
+.project header .projectDateRange {
+  font-style: italic;
+}
+.project header .projectTopics {
+  font-style: italic;
+  margin-left: auto;
+  text-transform: lowercase;
 }
