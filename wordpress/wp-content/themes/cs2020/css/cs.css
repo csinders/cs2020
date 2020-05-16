@@ -51,13 +51,13 @@ input, button, textarea, select {
   font-family: Laica;
   font-style: normal;
   font-weight: 400;
-  src: url('../webfonts/LaicaATrial-Regular.woff2') format('woff2'), url('../webfonts/LaicaATrial-Regular.woff') format('woff');
+  src: url('../webfonts/LaicaA-Regular.woff2') format('woff2'), url('../webfonts/LaicaA-Regular.woff') format('woff');
 }
 @font-face {
   font-family: Laica;
   font-style: italic;
   font-weight: 400;
-  src: url('../webfonts/LaicaATrial-Italic.woff2') format('woff2'), url('../webfonts/LaicaATrial-Italic.woff') format('woff');
+  src: url('../webfonts/LaicaA-Italic.woff2') format('woff2'), url('../webfonts/LaicaA-Italic.woff') format('woff');
 }
 h2 {
   font-weight: 700;
@@ -81,10 +81,9 @@ figcaption {
   font-size: 12px;
 }
 body {
-  margin: 4% 4% 0;
   max-width: 1000px;
   font-size: 16px;
-  margin: 32px;
+  margin: 32px 32px 0;
   font-weight: 300;
   font-style: normal;
   font-family: Laica, sans-serif;
