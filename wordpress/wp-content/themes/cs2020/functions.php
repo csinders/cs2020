@@ -77,7 +77,7 @@ function get_project_date_range() {
 
     $end_date = DateTime::createFromFormat('Ymd', get_post_meta($post_id, 'project_end_date')[0]);
     if( $end_date == '') {
-        $end_date = 'current';
+        $end_date = 'Current';
     } else {
         $end_date = $end_date->format('Y');
     }

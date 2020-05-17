@@ -25,7 +25,7 @@
                 
                 <article data-project-start-date="<?php echo($project['start_date']) ?>" data-project-end-date="<?php echo($project['end_date']) ?>" data-project-topics="<?php print_r($project['topics']) ?>">
                     <h2><a href="<?php echo $project['link'] ?>"><?php echo $project['title'] ?></a></h2>
-                    <p><?php echo $project['excerpt'] ?></p>
+                    <!-- <p><?php echo $project['excerpt'] ?></p> -->
                 </article>
 
         <?php   } ?>
