@@ -1,6 +1,6 @@
 // $( function() {
 
-	var topics = [],
+	var topics = ['privacy', 'data', 'feminism', 'abuse', 'social networks', 'loss', 'AI', 'politics'],
 		projects = [],
 		$topicLinks = $( '[data-topic-link' ),
 		$projects = $( '#projects article' ),
@@ -16,14 +16,11 @@
 		var thisTopic,
 			thisTimelineEl
 
-		$topicLinks.each( function(a, b) {
-			thisTopic = $( this ).attr( 'data-topic-link' )
-			topics.push( thisTopic )
+		$.each(topics, function( index, value ) {
 			thisTimelineEl = $( '<div class="timelineTopic" />' )
-			thisTimelineEl.append( `<div class="timelineLabel">${thisTopic}</div>` )
+			thisTimelineEl.append( `<div class="timelineLabel">${value}</div>` )
 			$timelines.append( thisTimelineEl )
-			console.log( thisTopic )
-		})
+		} )
 
 	}
 
@@ -133,6 +130,6 @@
 	$(window).scroll( drawTheCoords )
 	$(window).resize( drawTheCoords )
 
-	console.log( topics, projects, timelineStart, timelineEnd )
+	// console.log( topics, projects, timelineStart, timelineEnd )
 
 // } )

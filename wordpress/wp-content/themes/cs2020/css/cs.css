@@ -88,6 +88,11 @@ body {
   font-style: normal;
   font-family: Laica, sans-serif;
 }
+@media (max-width: 768px) {
+  body {
+    margin: 12px 12px 0;
+  }
+}
 p {
   margin: 0;
 }
@@ -100,13 +105,26 @@ figure {
 section {
   padding: 0 1.2rem;
 }
+@media (max-width: 768px) {
+  section {
+    padding: 0 0.6rem;
+  }
+}
 nav {
   margin-bottom: 5rem;
   padding: 0.7rem 1.2rem;
   background-color: #4eacf8;
+  color: #fff;
   display: flex;
   justify-content: space-between;
-  color: #fff;
+}
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column-reverse;
+    margin-bottom: 2rem;
+    padding-right: 0.6rem;
+    padding-left: 0.6rem;
+  }
 }
 nav h1 {
   font-size: 16px;
@@ -118,6 +136,11 @@ nav h1 a {
 nav ul.menu {
   display: inline;
 }
+@media (max-width: 768px) {
+  nav ul.menu {
+    font-size: 12px;
+  }
+}
 nav ul.menu li {
   display: inline;
 }
@@ -126,7 +149,13 @@ nav ul.menu li.current-menu-item a {
 }
 nav ul.menu li:after {
   content: ' •';
-  padding-right: 0.8rem;
+  padding-right: 0.6rem;
+}
+@media (max-width: 768px) {
+  nav ul.menu li:after {
+    content: ' /';
+    padding-right: 0.4rem;
+  }
 }
 nav ul.menu li:last-child:after {
   display: none;
@@ -136,6 +165,11 @@ nav ul.menu li a {
   text-decoration: none;
   margin-right: 1rem;
   padding-bottom: 0.2rem;
+}
+@media (max-width: 768px) {
+  nav ul.menu li a {
+    margin-right: 0.6rem;
+  }
 }
 #intro {
   margin-bottom: 2rem;
@@ -211,30 +245,33 @@ nav ul.menu li a {
   position: absolute;
   text-transform: uppercase;
   z-index: 99999;
-  color: white;
+  color: black;
   transform-origin: left bottom;
-  transform: rotate(90deg) translate(-0.9vw, 0.13vw);
   white-space: nowrap;
-  font-size: 0.9vw;
-  line-height: 1.5vw;
+  line-height: 0.9vw;
+  transform: rotate(90deg) translate(-0.9vw, -0.1vw);
+  font-size: 0.7vw;
+  padding: 0 5px;
+}
+@media (max-width: 768px) {
+  #work #timelines .timelineTopic .timelineLabel {
+    display: none;
+  }
 }
 #work #timelines .timelineRange {
   position: absolute;
   width: 100%;
-  border-top: 1px dashed black;
-  border-bottom: 1px dashed black;
-  background-color: rgba(255, 255, 255, 0.4);
 }
 #work #timelines .timelineRange .topic {
-  background-color: rgba(0, 0, 0, 0.7);
   width: calc(12.5% - 4px);
-  height: calc(100% - 4px);
+  height: calc(100% - 2px);
   display: inline-block;
   position: absolute;
-  margin: 2px;
-  border-radius: 2px;
+  margin: 1px 2px;
+  border-radius: 100px;
+  background-color: rgba(255, 255, 255, 0.5);
 }
-@media (max-width: 920px) {
+@media (max-width: 768px) {
   #work #timelines .timelineRange .topic {
     width: 12.5%;
     height: 100%;
@@ -276,6 +313,11 @@ nav ul.menu li a {
 #work #projects article {
   margin: 1rem 2rem 3.5rem 0.5rem;
 }
+@media (max-width: 768px) {
+  #work #projects article {
+    margin: 1rem 0 1.5rem 0.5rem;
+  }
+}
 #work #projects article h2 a {
   text-decoration: none;
 }
@@ -285,6 +327,11 @@ nav ul.menu li a {
   padding-bottom: 0.4rem;
   border-bottom: 1px solid #000;
   align-items: baseline;
+}
+@media (max-width: 768px) {
+  .project header {
+    margin-bottom: 1rem;
+  }
 }
 .project header h2 {
   margin-right: 0.5rem;

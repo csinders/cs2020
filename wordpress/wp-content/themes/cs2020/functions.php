@@ -25,13 +25,10 @@ function loadjs() {
 add_action('wp_enqueue_scripts', 'loadjs');
 
 function get_projects() {
-
-    $posts = get_posts( array(
-        'posts_per_page' => -1,
-        'order'          => 'DESC',
-        'meta_key'			=> 'project_start_date',
-        'orderby'			=> 'meta_value'
-    ) );
+	
+	$posts = get_posts(array(
+		'posts_per_page'	=> -1
+	));
 
     $projects = array();
 
@@ -39,6 +36,9 @@ function get_projects() {
         $post_id = $post->ID;
 
         $start_date = DateTime::createFromFormat('Ymd', get_post_meta($post_id, 'project_start_date')[0]);
+        if( $start_date == '') {
+            continue;
+        }
         $start_date = $start_date->format('Y-m-d');
 
         $end_date = DateTime::createFromFormat('Ymd', get_post_meta($post_id, 'project_end_date')[0]);

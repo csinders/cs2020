@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
     <title>Caroline Sinders</title>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
     <link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_template_directory_uri(); ?>/favicon/apple-touch-icon.png">

@@ -6,20 +6,18 @@
     <h1><a href="/" title="Home">Caroline Sinders</a></h1>
 </nav>
   
-    <div id="primary" class="content-area">
-        <main id="main" class="site-main" role="main">
-  
-        <?php
-        // Start the loop.
-        while ( have_posts() ) : the_post();
-  
-            the_content();
-  
-        // End the loop.
-        endwhile;
-        ?>
-  
-        </main><!-- .site-main -->
-    </div><!-- .content-area -->
+<section role="main">
+
+    <?php
+    // Start the loop.
+    while ( have_posts() ) : the_post();
+
+        the_content();
+
+    // End the loop.
+    endwhile;
+    ?>
+
+</section>
   
 <?php get_footer(); ?>
