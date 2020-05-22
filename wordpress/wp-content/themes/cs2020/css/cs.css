@@ -389,6 +389,9 @@ nav ul.menu li a {
   height: 100%;
   position: absolute;
 }
+.project .wp-block-image {
+  margin-bottom: 2em;
+}
 .blocks-gallery-grid.columns-3 .blocks-gallery-image, .blocks-gallery-grid.columns-3 .blocks-gallery-item, .wp-block-gallery.columns-3 .blocks-gallery-image, .wp-block-gallery.columns-3 .blocks-gallery-item {
   flex-grow: 0;
 }
