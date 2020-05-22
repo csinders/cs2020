@@ -13,7 +13,7 @@
             <header>
                 <?php the_title('<h2>', '</h2>'); ?>
                 <span class="projectDateRange"><?php get_project_date_range(); ?></span>
-                <!-- <span class="projectTopics"><?php get_project_categories(); ?></span> -->
+                <span class="projectTopics"><?php get_project_categories(); ?></span>
             </header>
 
             <?php the_content(); ?>

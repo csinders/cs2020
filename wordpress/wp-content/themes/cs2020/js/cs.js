@@ -107,14 +107,14 @@
 
 		$ranges.each( function( index ) {
 			$this = $( this )
-			if( scroll > $svg.position().top - 21 ) {
-				top = $this.position().top + ( $( window ).scrollTop() - $svg.position().top ) + 21
+			if( scroll > $svg.position().top - 20 ) {
+				top = $this.position().top + ( $( window ).scrollTop() - $svg.position().top ) + 20
 			} else {
 				top = $this.position().top
 			}
 			
 			bottom = top + $this.height()
-			projectY = $projects.eq( index ).position().top + 40
+			projectY = $projects.eq( index ).position().top + 16
 			// console.log( $svg.position().top, $( window ).scrollTop() )
 			// console.log( top, bottom, projectY, width )
 			addPaths( top, bottom, projectY, width )

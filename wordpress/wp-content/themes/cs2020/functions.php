@@ -6,7 +6,7 @@ function wpb_custom_new_menu() {
 add_action( 'init', 'wpb_custom_new_menu' );
 
 function load_stylesheets() {
-    wp_register_style('cs', get_template_directory_uri() . '/css/cs.css', array(), false, 'all');
+    wp_register_style('cs', get_template_directory_uri() . '/css/cs.css?date=20-05-2020v3', array(), false, 'all');
     wp_enqueue_style('cs');
 }
 add_action('wp_enqueue_scripts', 'load_stylesheets');
@@ -73,7 +73,11 @@ function get_project_date_range() {
     $post_id = $post->ID;
 
     $start_date = DateTime::createFromFormat('Ymd', get_post_meta($post_id, 'project_start_date')[0]);
-    $start_date = $start_date->format('Y');
+    if( $start_date == '') {
+        $start_date = date('Y');
+    } else {
+        $start_date = $start_date->format('Y');
+    }
 
     $end_date = DateTime::createFromFormat('Ymd', get_post_meta($post_id, 'project_end_date')[0]);
     if( $end_date == '') {
