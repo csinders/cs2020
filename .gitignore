@@ -2,6 +2,9 @@
 node_modules
 
 wordpress/*
+!wordpress/favicon.ico
+!wordpress/wp-config.php
+!wordpress/wp-content
 
 wordpress/wp-content/*
 !wordpress/wp-content/mu-plugins
