@@ -401,3 +401,9 @@ nav ul.menu li a {
     margin-right: 0;
   }
 }
+.page section {
+  margin-bottom: 4rem;
+}
+.wp-block-image img {
+  height: auto;
+}
